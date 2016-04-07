@@ -8,10 +8,11 @@ body {
 #browser, #playlist {
 	border-radius: 10px;
 	padding: 5px 5px 3px 5px;
-	width: 300px;
+	width: 45%;
 	float: left;
-	margin-right: 15px;
-	height: 500px;
+	margin-right: 5px;
+	margin-top: 10px;
+	min-height: 300px;
 	overflow: auto;
 }
 #browser a, #playlist a {
@@ -35,6 +36,10 @@ body {
 	background: #eee;
 	padding: 5px;
 	border-radius: 5px;
+}
+#player {
+	width: 100%;
+	margin-left: 0px;
 }
 </style>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -130,11 +135,11 @@ google.setOnLoadCallback(init);
 <audio id="player" controls autoplay autobuffer>
 <p>What? Your browser doesn't support &lt;audio&gt;?! Lame.</p>
 </audio>
+<div id="controls">
+	<a id="addall">Add all</a>
+	<a id="next">Next</a>
+</div>
 <div id="browser"></div>
 <div id="playlist"></div>
-<div id="controls">
-<a id="addall">Add all</a>
-<a id="next">Next</a>
-</div>
 </body>
 </html>
